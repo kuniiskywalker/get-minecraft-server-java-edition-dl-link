@@ -7,6 +7,22 @@ Get minecraft server java edition download link
 
 Java library to get download of minecraft server java edition.
 
+## Requirement
+Docker
+
+## Usage
+
+Compile java on docker
+
+```
+make build
+```
+
+Exec java on docker
+```
+make run
+```
+
 ## Author
 
 [@kuniiskywalker](https://twitter.com/kuniiskywalker)
