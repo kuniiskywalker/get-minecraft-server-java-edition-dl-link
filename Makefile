@@ -1,7 +1,11 @@
 build:
-	docker run -it --rm --name my-maven-project -v "$(PWD)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 mvn clean install
+	docker build -t kuniiskywalker/get-minecraft-server-java-edition-dl-link .
 .PHONY: build
 
+push: build
+	docker push kuniiskywalker/get-minecraft-server-java-edition-dl-link
+.PHONY: push
+
 run:
-	docker run --rm -it -v $(PWD):/data java /bin/bash /data/run.sh
+	docker run --rm -it kuniiskywalker/get-minecraft-server-java-edition-dl-link
 .PHONY: run
